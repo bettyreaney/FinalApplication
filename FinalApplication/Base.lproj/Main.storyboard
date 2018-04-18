@@ -39,9 +39,13 @@
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Chipotle" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-bx-c3N">
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="LnJ-bx-c3N" secondAttribute="height" multiplier="1:1" id="o1G-2y-ZyI"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Tln-LK-2NM" appends="YES" id="FHv-Rk-gOu"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -61,12 +65,18 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="jz9-9q-iVd" id="cFt-AC-rgD"/>
+                        <outlet property="photoImageView" destination="LnJ-bx-c3N" id="x44-nI-dHc"/>
                         <outlet property="restaurantNameLabel" destination="2zu-UC-epE" id="qCn-pU-lei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Tln-LK-2NM">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="cFw-I1-1Yv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
+            <point key="canvasLocation" x="-591" y="237"/>
         </scene>
     </scenes>
     <resources>
