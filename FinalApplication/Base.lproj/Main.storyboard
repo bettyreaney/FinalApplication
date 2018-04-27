@@ -52,7 +52,7 @@
                                             <outletCollection property="gestureRecognizers" destination="QUl-8F-scm" appends="YES" id="oEA-pS-tRu"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-aA-LPk" customClass="RatingControl" customModule="FinalApplication" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-aA-LPk" customClass="RatingControl" customModule="FinalApplication" customModuleProvider="target">
                                         <frame key="frameInset" minY="433" width="200" height="110"/>
                                     </stackView>
                                 </subviews>
