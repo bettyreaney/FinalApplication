@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mM9-fn-Kwn">
-                                <frame key="frameInset" minX="39" minY="40" width="320" height="543"/>
+                                <frame key="frameInset" minX="12" minY="28" width="320" height="477"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zu-UC-epE">
@@ -52,8 +52,8 @@
                                             <outletCollection property="gestureRecognizers" destination="QUl-8F-scm" appends="YES" id="oEA-pS-tRu"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-aA-LPk" customClass="RatingControl" customModule="FinalApplication" customModuleProvider="target">
-                                        <frame key="frameInset" minY="433" width="200" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wgr-Gd-7tG" customClass="RatingControl" customModule="FinalApplication" customModuleProvider="target">
+                                        <frame key="frameInset" minY="433" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -73,7 +73,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="49" y="-173"/>
+            <point key="canvasLocation" x="48.799999999999997" y="-173.16341829085459"/>
         </scene>
     </scenes>
     <resources>
