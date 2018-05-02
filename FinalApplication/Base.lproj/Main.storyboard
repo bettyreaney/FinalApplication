@@ -19,31 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mM9-fn-Kwn">
-                                <frame key="frameInset" minX="12" minY="28" width="320" height="477"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mM9-fn-Kwn">
+                                <frame key="frameInset" minX="12" minY="28" width="321" height="439"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zu-UC-epE">
-                                        <frame key="frameInset" width="133" height="21"/>
+                                        <frame key="frameInset" minX="94" width="133" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jz9-9q-iVd">
-                                        <frame key="frameInset" minY="29" width="171" height="30"/>
+                                        <frame key="frameInset" minX="75" minY="29" width="171" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0J-jQ-bJw">
-                                        <frame key="frameInset" minY="67" width="141" height="30"/>
-                                        <state key="normal" title="Set default label text"/>
-                                        <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="quE-sz-rJR"/>
-                                        </connections>
-                                    </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-bx-c3N">
-                                        <frame key="frameInset" minY="105" width="320" height="320"/>
+                                        <frame key="frameInset" minY="67" width="321" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="LnJ-bx-c3N" secondAttribute="height" multiplier="1:1" id="Nmr-3C-9bU"/>
@@ -53,7 +46,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wgr-Gd-7tG" customClass="RatingControl" customModule="FinalApplication" customModuleProvider="target">
-                                        <frame key="frameInset" minY="433" width="252" height="44"/>
+                                        <frame key="frameInset" minX="34" minY="395" width="253" height="44"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -63,6 +56,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="jz9-9q-iVd" id="cFt-AC-rgD"/>
                         <outlet property="photoImageView" destination="LnJ-bx-c3N" id="x44-nI-dHc"/>
+                        <outlet property="ratingControl" destination="wgr-Gd-7tG" id="8yJ-pD-Ms7"/>
                         <outlet property="restaurantNameLabel" destination="2zu-UC-epE" id="qCn-pU-lei"/>
                     </connections>
                 </viewController>
@@ -73,7 +67,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="-173.16341829085459"/>
+            <point key="canvasLocation" x="90" y="-178"/>
         </scene>
     </scenes>
     <resources>
