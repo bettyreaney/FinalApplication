@@ -114,7 +114,6 @@ import UIKit
             
         //Add the new button to the rating button array
         ratingButtons.append(button)
-            
         }
         
         updateButtonSelectionStates()
@@ -149,7 +148,6 @@ import UIKit
             button.accessibilityValue = valueString
             
         }
-            
  
     }
     
