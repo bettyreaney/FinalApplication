@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RestaurantViewController.swift
 //  FinalApplication
 //
 //  Created by Betty Reaney on 4/17/18.
@@ -8,14 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     //MARK: Properties
     
     @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var restaurantNameLabel: UILabel!
 
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -47,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        restaurantNameLabel.text = textField.text
+        
     }
     
     //MARK: UIImagePickerControllerDelegate

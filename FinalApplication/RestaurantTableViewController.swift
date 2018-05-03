@@ -127,7 +127,7 @@ class RestaurantTableViewController: UITableViewController {
             fatalError("Unable to instantiate restaurant1")
             
         }
-        guard let restaurant2 = Restaurant(name: "Cheesecake Factory", photo: photo2, rating: 4) else {
+        guard let restaurant2 = Restaurant(name: "Cheesecake Factory", photo: photo2, rating: 5) else {
             fatalError("Unable to instantiate restaurant2")
             
         }
@@ -139,23 +139,23 @@ class RestaurantTableViewController: UITableViewController {
             fatalError("Unable to instantiate restaurant4")
             
         }
-        guard let restaurant5 = Restaurant(name: "Panera Bread", photo: photo5, rating: 4) else {
+        guard let restaurant5 = Restaurant(name: "Panera Bread", photo: photo5, rating: 2) else {
             fatalError("Unable to instantiate restaurant5")
             
         }
-        guard let restaurant6 = Restaurant(name: "Kevin's Noodle House", photo: photo6, rating: 4) else {
+        guard let restaurant6 = Restaurant(name: "Kevin's Noodle House", photo: photo6, rating: 5) else {
             fatalError("Unable to instantiate restaurant6")
             
         }
-        guard let restaurant7 = Restaurant(name: "Chipotle", photo: photo7, rating: 4) else {
+        guard let restaurant7 = Restaurant(name: "Chipotle", photo: photo7, rating: 2) else {
             fatalError("Unable to instantiate restaurant7")
             
         }
-        guard let restaurant8 = Restaurant(name: "McDonalds", photo: photo8, rating: 4) else {
+        guard let restaurant8 = Restaurant(name: "McDonalds", photo: photo8, rating: 1) else {
             fatalError("Unable to instantiate restaurant8")
             
         }
-        guard let restaurant9 = Restaurant(name: "Wing Stop", photo: photo9, rating: 4) else {
+        guard let restaurant9 = Restaurant(name: "Wing Stop", photo: photo9, rating: 3) else {
             fatalError("Unable to instantiate restaurant9")
             
         }
