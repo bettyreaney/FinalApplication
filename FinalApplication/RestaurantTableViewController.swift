@@ -33,24 +33,35 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return restaurants.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "RestaurantTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RestaurantTableViewCell else{
+                fatalError("The dequeued cell is not an instance of Restaurant TableViewCell.")
+        }
+        
+        
 
-        // Configure the cell...
+        // Fetches the appropriate meal for the data source layout.
+        let restaurant = restaurants[indexPath.row]
+        
+        cell.nameLabel.text = restaurant.name
+        cell.photoImageView.image = restaurant.photo
+        cell.ratingControl.rating = restaurant.rating
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
