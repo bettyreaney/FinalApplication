@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurant Table View Controller-->
+        <!--Your Restaurants-->
         <scene sceneID="rrq-Ix-XU0">
             <objects>
                 <tableViewController id="hne-lC-kdV" customClass="RestaurantTableViewController" customModule="FinalApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,9 @@
                             <outlet property="delegate" destination="hne-lC-kdV" id="vl2-R9-Ats"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="IGs-pB-XWj"/>
+                    <navigationItem key="navigationItem" title="Your Restaurants" id="IGs-pB-XWj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5rd-ha-aB5"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVB-2b-Q6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
