@@ -55,16 +55,16 @@
                     <navigationItem key="navigationItem" title="Your Restaurants" id="IGs-pB-XWj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5rd-ha-aB5">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="EZJ-Fi-JO0"/>
+                                <segue destination="ha4-Oe-hY5" kind="presentation" identifier="AddItem" id="Iu4-Dc-nVI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVB-2b-Q6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="908" y="-367"/>
         </scene>
-        <!--Restaurant View Controller-->
+        <!--New Restaurant-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RestaurantViewController" customModule="FinalApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,6 +104,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Restaurant" id="b37-aN-hcB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GDw-AI-9UV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="346-AL-NJM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="jz9-9q-iVd" id="cFt-AC-rgD"/>
                         <outlet property="photoImageView" destination="LnJ-bx-c3N" id="x44-nI-dHc"/>
@@ -117,7 +121,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1728.8" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="2497" y="-354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OKR-bu-SDr">
@@ -136,6 +140,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSy-ga-3XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="-367.46626686656674"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oo0-8v-Vnx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ha4-Oe-hY5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k9M-Cd-InP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FUC-Yz-TxU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7p-ic-tNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.8" y="-367.46626686656674"/>
         </scene>
     </scenes>
     <resources>
