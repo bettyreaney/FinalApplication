@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B12918120995FC000A20405 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B12918020995FC000A20405 /* RestaurantTableViewCell.swift */; };
+		0B1291832099753900A20405 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1291822099753900A20405 /* RestaurantTableViewController.swift */; };
 		0B319F002086AC5400810EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B319EFF2086AC5400810EA8 /* AppDelegate.swift */; };
 		0B319F022086AC5400810EA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B319F012086AC5400810EA8 /* ViewController.swift */; };
 		0B319F072086AC5400810EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B319F062086AC5400810EA8 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0B12918020995FC000A20405 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		0B1291822099753900A20405 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		0B319EFC2086AC5400810EA8 /* FinalApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B319EFF2086AC5400810EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B319F012086AC5400810EA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +109,9 @@
 				0B319F012086AC5400810EA8 /* ViewController.swift */,
 				0BD70B482092D2BC00672CAC /* RatingControl.swift */,
 				0B525E25209948A500A998D0 /* Restaurant.swift */,
-				0B634AD82086EC870081E1BC /* Main.storyboard */,
 				0B12918020995FC000A20405 /* RestaurantTableViewCell.swift */,
+				0B1291822099753900A20405 /* RestaurantTableViewController.swift */,
+				0B634AD82086EC870081E1BC /* Main.storyboard */,
 				0B319F062086AC5400810EA8 /* Assets.xcassets */,
 				0B319F082086AC5400810EA8 /* LaunchScreen.storyboard */,
 				0B319F0B2086AC5400810EA8 /* Info.plist */,
@@ -273,6 +276,7 @@
 			files = (
 				0B12918120995FC000A20405 /* RestaurantTableViewCell.swift in Sources */,
 				0B525E26209948A500A998D0 /* Restaurant.swift in Sources */,
+				0B1291832099753900A20405 /* RestaurantTableViewController.swift in Sources */,
 				0B319F022086AC5400810EA8 /* ViewController.swift in Sources */,
 				0BD70B492092D2BC00672CAC /* RatingControl.swift in Sources */,
 				0B319F002086AC5400810EA8 /* AppDelegate.swift in Sources */,
