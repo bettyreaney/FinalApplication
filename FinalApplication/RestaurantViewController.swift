@@ -36,8 +36,10 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
         super.viewDidLoad()
         
         // Handle the text field’s user input through delegate callbacks.
-        
         nameTextField.delegate = self
+        
+        // Enable the Save button only if the text field has a valid Meal name.
+        updateSaveButtonState()
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,10 +53,16 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
+        
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            // Disable the Save button while editing.
+            saveButton.isEnabled = false
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        updateSaveButtonState()
+        navigationItem.title = textField.text
         
     }
     
@@ -125,6 +133,15 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
         present(imagePickerController, animated: true, completion: nil)
         
     }
+    
+    //MARK Private Methods
+    private func updateSaveButtonState() {
+        //Disable the Save button if the text field is empty.
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
+    
+    
     
 }
 
