@@ -31,6 +31,8 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     var restaurant: Restaurant?
     
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -38,9 +40,21 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         
+        //Set up views if editing an existing Restaurant
+        
+        if let restaurant = restaurant {
+        
+            navigationItem.title = restaurant.name
+            nameTextField.text   = restaurant.name
+            photoImageView.image = restaurant.photo
+            ratingControl.rating = restaurant.rating
+        }
+        
         // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -91,6 +105,12 @@ class RestaurantViewController: UIViewController, UITextFieldDelegate, UIImagePi
     }
     
     //MARK Navigation
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     // This method lets you configure a view controller before it's presented.
     

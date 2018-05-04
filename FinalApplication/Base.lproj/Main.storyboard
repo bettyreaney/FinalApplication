@@ -44,6 +44,7 @@
                                     <outlet property="nameLabel" destination="lS7-bU-A4I" id="mdD-0H-Qjl"/>
                                     <outlet property="photoImageView" destination="lP0-1V-6XW" id="NJC-w7-vt1"/>
                                     <outlet property="ratingControl" destination="DuK-ZX-PCt" id="kzG-dL-6Aw"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="Cd8-kB-jSY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +106,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Restaurant" id="b37-aN-hcB">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GDw-AI-9UV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GDw-AI-9UV">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="zTs-hQ-jSV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="346-AL-NJM">
                             <connections>
                                 <segue destination="sDc-R6-IMr" kind="unwind" unwindAction="unwindToRestaurantListWithSender:" id="muV-vd-seU"/>
@@ -163,10 +168,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7p-ic-tNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728.8" y="-367.46626686656674"/>
+            <point key="canvasLocation" x="1697" y="-5"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cd8-kB-jSY"/>
+    </inferredMetricsTieBreakers>
 </document>

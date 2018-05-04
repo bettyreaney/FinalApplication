@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class RestaurantTableViewController: UITableViewController {
     
@@ -98,15 +99,40 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        super.prepare(for: segue, sender: sender)
+        switch(segue.identifier ?? "") {
+            
+        case "AddItem":
+        os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+        
+        case "ShowDetail":
+            guard let restaurantDetailViewController = segue.destination as?
+        RestaurantViewController else{
+            fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedRestaurantCell = sender as? RestaurantTableViewCell else{
+                fatalError("Unexpected sender: \(sender)")
+            }
+            guard let indexPath = tableView.indexPath(for: selectedRestaurantCell) else{
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedRestaurant = restaurants[indexPath.row]
+            restaurantDetailViewController.restaurant = selectedRestaurant
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
     }
-    */
+ 
 
     //MARK: Actions
     
@@ -124,6 +150,8 @@ class RestaurantTableViewController: UITableViewController {
     }
     
 
+    
+    
     // MARK: Private Methods
     
     private func loadSampleRestaurants(){
