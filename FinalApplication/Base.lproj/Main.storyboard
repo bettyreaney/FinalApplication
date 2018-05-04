@@ -62,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVB-2b-Q6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="-367"/>
+            <point key="canvasLocation" x="886" y="-367"/>
         </scene>
         <!--New Restaurant-->
         <scene sceneID="tne-QT-ifu">
@@ -106,15 +106,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Restaurant" id="b37-aN-hcB">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GDw-AI-9UV"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="346-AL-NJM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="346-AL-NJM">
+                            <connections>
+                                <segue destination="sDc-R6-IMr" kind="unwind" unwindAction="unwindToRestaurantListWithSender:" id="muV-vd-seU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="jz9-9q-iVd" id="cFt-AC-rgD"/>
                         <outlet property="photoImageView" destination="LnJ-bx-c3N" id="x44-nI-dHc"/>
                         <outlet property="ratingControl" destination="wgr-Gd-7tG" id="8yJ-pD-Ms7"/>
+                        <outlet property="saveButton" destination="346-AL-NJM" id="aBf-Qy-1rF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="sDc-R6-IMr" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="QUl-8F-scm">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="b1D-Zf-App"/>

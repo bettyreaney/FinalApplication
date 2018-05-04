@@ -108,8 +108,23 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
 
+    //MARK: Actions
+    
+    @IBAction func unwindToRestaurantList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as?
+            RestaurantViewController, let restaurant = sourceViewController.restaurant {
+            
+            //Add a new restaurant
+            let newIndexPath = IndexPath(row: restaurants.count, section: 0)
+            
+            restaurants.append(restaurant)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        
+        }
+    }
+    
 
-    // MARK Properties
+    // MARK: Private Methods
     
     private func loadSampleRestaurants(){
         
